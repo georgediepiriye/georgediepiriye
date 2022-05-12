@@ -32,7 +32,8 @@ const NavItem = styled.div`
   padding: 15px;
   cursor: pointer;
   &:hover {
-    color: white;
+    font-size: 24px;
+    font-weight: 600;
     transition: all 0.3s ease-out;
   }
 `;
@@ -65,6 +66,7 @@ const Nav = () => {
 
       <MiddleContainer>
         <NavItem>Home</NavItem>
+        <NavItem>About</NavItem>
         <NavItem>Projects</NavItem>
         <NavItem>Contact</NavItem>
       </MiddleContainer>
