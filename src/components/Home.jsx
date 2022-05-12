@@ -8,7 +8,7 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   height: 80vh;
-  margin-top: 20px;
+  margin-top: 100px;
 `;
 
 const Wrapper = styled.div`

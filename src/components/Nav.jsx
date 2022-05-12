@@ -7,6 +7,9 @@ const Container = styled.div`
   justify-content: space-between;
   background-color: #311e25;
   height: 80px;
+
+  position: fixed;
+  top: 0;
 `;
 
 const LogoContainer = styled.div`
