@@ -6,7 +6,7 @@ const Container = styled.div`
   width: 100%;
   height: 60vh;
   flex-direction: column;
-  margin-top: 40px;
+
   background-color: #311e25;
   display: flex;
   justify-content: center;
@@ -46,12 +46,13 @@ const About = () => {
         </Arrow>
 
         <AboutText>
-          Innovative and result-oriented FullStack Software Engineer, with
-          experience in building scalable web applications and API’s using
-          modern architectures. Adept at developing, and maintaining Web
-          Applications. I have a Bachelor's Degree in Computer Science and i'm
-          skilled in HTML, CSS, JavaScript, ReactJS, NodeJS, ExpressJS, PHP,
-          Laravel, Git, MongoDb, MySQL and PgSQL.
+          I'm an Innovative and result-oriented FullStack Software Engineer
+          based in Port Harcourt, Nigeria. I am experienced in building scalable
+          web applications and API’s using modern architectures. Adept at
+          developing, and maintaining Web Applications. I have a Bachelor's
+          Degree in Computer Science and i'm skilled in HTML, CSS, JavaScript,
+          ReactJS, NodeJS, ExpressJS, PHP, Laravel, Git, MongoDb, MySQL and
+          PgSQL.
         </AboutText>
       </Wrapper>
     </Container>

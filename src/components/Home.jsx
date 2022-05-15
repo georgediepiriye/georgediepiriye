@@ -7,13 +7,14 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 80vh;
-  margin-top: 100px;
+  height: 700px;
+
+  background-color: #d9d2d2;
 `;
 
 const Wrapper = styled.div`
   width: 70%;
-  height: 100%;
+  height: 70%;
   background-color: #503841;
   border-radius: 30px;
   color: white;

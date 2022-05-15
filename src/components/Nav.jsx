@@ -10,6 +10,7 @@ const Container = styled.div`
 
   position: fixed;
   top: 0;
+  z-index: 3;
 `;
 
 const LogoContainer = styled.div`
