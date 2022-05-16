@@ -35,10 +35,10 @@ const NavItem = styled.div`
   font-size: 16px;
   padding: 15px;
   cursor: pointer;
+  transition: 0.3s;
   &:hover {
-    font-size: 24px;
-    font-weight: 600;
-    transition: all 0.3s ease-out;
+    transform: scale(1.4);
+    font-weight: 700;
   }
 `;
 
