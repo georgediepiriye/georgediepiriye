@@ -64,7 +64,7 @@ const GithubIconContainer = styled.div`
 `;
 
 const TwitterIconContainer = styled.div`
-  color: #5151e1;
+  color: #7d7de3;
 `;
 
 const Connect = () => {

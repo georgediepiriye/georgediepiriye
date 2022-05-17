@@ -31,7 +31,7 @@ const Input = styled.input`
   padding-left: 20px;
   margin-bottom: 20px;
   border: none;
-  border-radius: 7px;
+
   height: 70px;
 `;
 
@@ -41,7 +41,6 @@ const MessageInput = styled.textarea`
   padding-top: 10px;
   margin-bottom: 20px;
   border: none;
-  border-radius: 10px;
   min-height: 70px;
 `;
 
