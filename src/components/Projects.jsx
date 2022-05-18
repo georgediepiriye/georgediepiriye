@@ -15,6 +15,9 @@ const Container = styled.div`
   width: 100%;
   height: auto;
   background-color: #d9d2d2;
+  @media only screen and (max-width: 810px) {
+    padding-bottom: 30px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -24,6 +27,9 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media only screen and (max-width: 550px) {
+    width: 85vw;
+  }
 `;
 
 const Heading = styled.h3`
@@ -52,6 +58,10 @@ const ImageContainer = styled.div`
 
   &:hover {
     transform: scale(1.1);
+  }
+
+  @media only screen and (max-width: 810px) {
+    padding: 0px;
   }
 `;
 

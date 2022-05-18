@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import portfolio from "../images/portfolio.jpg";
 
 const Container = styled.div`
   width: 100%;
-  height: 60vh;
+  height: auto;
   flex-direction: column;
 
   background-color: #311e25;
@@ -21,6 +22,9 @@ const Wrapper = styled.div`
   align-items: center;
   padding: 30px;
   flex-direction: column;
+  @media only screen and (max-width: 550px) {
+    width: 85vw;
+  }
 `;
 const Heading = styled.h3`
   color: #db9a64;
@@ -35,6 +39,23 @@ const AboutText = styled.div`
 const Arrow = styled.div`
   margin-bottom: 30px;
   color: #db9a64;
+`;
+
+const ImageContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  display: none;
+  @media only screen and (max-width: 650px) {
+    display: block;
+  }
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: auto;
 `;
 const About = () => {
   return (
@@ -54,6 +75,9 @@ const About = () => {
           ReactJS, NodeJS, ExpressJS, PHP, Laravel, Git, MongoDb, MySQL and
           PgSQL.
         </AboutText>
+        <ImageContainer>
+          <Image src={portfolio} />
+        </ImageContainer>
       </Wrapper>
     </Container>
   );

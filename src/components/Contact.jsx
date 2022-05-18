@@ -12,6 +12,13 @@ const Wrapper = styled.div`
   width: 70%;
   display: flex;
   margin-top: 100px;
+
+  @media only screen and (max-width: 810px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+  }
 `;
 const Heading = styled.h3`
   font-weight: 600;
@@ -23,6 +30,11 @@ const LeftSide = styled.div`
 const RightSide = styled.div`
   flex: 1;
   margin-left: 20px;
+
+  @media only screen and (max-width: 810px) {
+    margin-left: 0px;
+    margin-top: 25px;
+  }
 `;
 const SubText = styled.div``;
 

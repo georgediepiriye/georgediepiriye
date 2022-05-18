@@ -35,6 +35,13 @@ const IconsWrapper = styled.div`
   justify-content: space-between;
   margin-top: 40px;
   margin-bottom: 100px;
+
+  @media only screen and (max-width: 550px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85vw;
+  }
 `;
 
 const IconContainer = styled.div`
@@ -47,6 +54,10 @@ const IconContainer = styled.div`
 
   &:hover {
     transform: scale(0.8);
+  }
+
+  @media only screen and (max-width: 550px) {
+    margin-bottom: 20px;
   }
 `;
 

@@ -19,6 +19,10 @@ const Wrapper = styled.div`
   border-radius: 30px;
   color: white;
   display: flex;
+
+  @media only screen and (max-width: 550px) {
+    width: 85vw;
+  }
 `;
 
 const LeftBox = styled.div`
@@ -35,6 +39,10 @@ const RightBox = styled.div`
   display: flex;
 
   justify-content: start;
+
+  @media only screen and (max-width: 1115px) {
+    display: none;
+  }
 `;
 
 const FirstText = styled.h1`
