@@ -42,7 +42,7 @@ const Arrow = styled.div`
   color: #db9a64;
 `;
 
-const ImageContainer = styled.div`
+const ImageContainer = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,7 +77,6 @@ const ImageText = styled.div`
   margin-top: 10px;
 `;
 
-const Link = styled.a``;
 const Projects = () => {
   return (
     <Container id="projects">
@@ -87,42 +86,33 @@ const Projects = () => {
         <Arrow>
           <ArrowDownwardIcon />
         </Arrow>
-        <Link href="http://talesoftime.herokuapp.com/">
-          <ImageContainer>
-            <Image src={tales} />
-            <ImageText>Tales of Time</ImageText>
-          </ImageContainer>
-        </Link>
 
-        <Link href="https://heritagebuddy.herokuapp.com">
-          <ImageContainer>
-            <Image src={heritage} />
-            <ImageText>Heritage Buddy</ImageText>
-          </ImageContainer>
-        </Link>
+        <ImageContainer href="http://talesoftime.herokuapp.com/">
+          <Image src={tales} />
+          <ImageText>Tales of Time</ImageText>
+        </ImageContainer>
 
-        <Link href="https://trendsng.herokuapp.com/">
-          <ImageContainer>
-            <Image src={trends} />
-            <ImageText>Trends.ng</ImageText>
-          </ImageContainer>
-        </Link>
+        <ImageContainer href="https://heritagebuddy.herokuapp.com">
+          <Image src={heritage} />
+          <ImageText>Heritage Buddy</ImageText>
+        </ImageContainer>
 
-        <Link href="https://www.zuri.chat/">
-          <ImageContainer>
-            <Image src={zuri} />
-            <ImageText>Zuri</ImageText>
-          </ImageContainer>
-        </Link>
+        <ImageContainer href="https://trendsng.herokuapp.com/">
+          <Image src={trends} />
+          <ImageText>Trends.ng</ImageText>
+        </ImageContainer>
 
-        <Link href="https://ayalo.herokuapp.com/">
-          <ImageContainer>
-            <Image src={ayalo} />
-            <ImageText>Ayalo</ImageText>
-          </ImageContainer>
-        </Link>
+        <ImageContainer href="https://www.zuri.chat/">
+          <Image src={zuri} />
+          <ImageText>Zuri</ImageText>
+        </ImageContainer>
 
-        <ImageContainer>
+        <ImageContainer href="https://ayalo.herokuapp.com/">
+          <Image src={ayalo} />
+          <ImageText>Ayalo</ImageText>
+        </ImageContainer>
+
+        <ImageContainer href="/">
           <Image src={port} />
           <ImageText>My Portfolio</ImageText>
         </ImageContainer>

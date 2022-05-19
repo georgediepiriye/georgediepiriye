@@ -54,7 +54,7 @@ const MessageInput = styled.textarea`
   padding-top: 10px;
   margin-bottom: 20px;
   border: none;
-  min-height: 70px;
+  min-height: 130px;
 `;
 
 const ButtonContainer = styled.div`
