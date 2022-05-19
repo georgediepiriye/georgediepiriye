@@ -45,7 +45,7 @@ const IconsWrapper = styled.div`
   }
 `;
 
-const IconContainer = styled.div`
+const IconContainer = styled.a`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -86,21 +86,21 @@ const Connect = () => {
         <Heading>Don't be a stranger</Heading>
         <SecondHeading>Let's Connect</SecondHeading>
         <IconsWrapper>
-          <IconContainer>
+          <IconContainer href="https://www.linkedin.com/in/georgediepiriye/">
             <LinkedInIconContainer>
               <LinkedInIcon />
             </LinkedInIconContainer>
             <IconTitle>LinkedIn</IconTitle>
           </IconContainer>
 
-          <IconContainer>
+          <IconContainer href="https://github.com/georgediepiriye">
             <GithubIconContainer>
               <GitHubIcon />
             </GithubIconContainer>
             <IconTitle>GitHub</IconTitle>
           </IconContainer>
 
-          <IconContainer>
+          <IconContainer href="https://twitter.com/GeorgeDiepiriye">
             <TwitterIconContainer>
               <TwitterIcon />
             </TwitterIconContainer>

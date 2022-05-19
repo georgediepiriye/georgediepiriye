@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   @media only screen and (max-width: 550px) {
-    width: 85vw;
+    width: 95vw;
   }
 `;
 

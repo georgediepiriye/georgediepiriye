@@ -48,6 +48,18 @@ const RightBox = styled.div`
 
 const FirstText = styled.h1`
   font-weight: 600;
+  padding: 0px 10px;
+  @media only screen and (max-width: 365px) {
+    font-size: 25px;
+  }
+
+  @media only screen and (max-width: 335px) {
+    font-size: 22px;
+  }
+
+  @media only screen and (max-width: 325px) {
+    font-size: 18px;
+  }
 `;
 const SecondText = styled.h5`
   color: #db9a64;
@@ -68,6 +80,10 @@ const BottomBox = styled.div`
   margin-top: 30px;
   border-radius: 50% 50% 50% 50%;
   padding: 10px;
+
+  @media only screen and (max-width: 325px) {
+    display: none;
+  }
 `;
 
 const SkillsBox = styled.div`

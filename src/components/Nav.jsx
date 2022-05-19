@@ -18,11 +18,12 @@ const Container = styled.div`
   z-index: 3;
 `;
 
-const LogoContainer = styled.div`
+const LogoContainer = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: 20px;
+  cursor: pointer;
 `;
 const Logo = styled.h1`
   color: #db9a64;
@@ -132,7 +133,7 @@ const Nav = () => {
   };
   return (
     <Container>
-      <LogoContainer>
+      <LogoContainer href="/">
         <Logo>GD</Logo>
       </LogoContainer>
 
