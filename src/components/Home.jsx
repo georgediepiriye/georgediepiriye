@@ -82,7 +82,7 @@ const BottomBox = styled.div`
   padding: 10px;
 
   @media only screen and (max-width: 325px) {
-    display: none;
+    background-color: #503841;
   }
 `;
 
@@ -90,9 +90,19 @@ const SkillsBox = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+
+  @media only screen and (max-width: 325px) {
+    flex-direction: column;
+  }
 `;
 const BottomText = styled.div`
   color: #dadada;
+
+  @media only screen and (max-width: 325px) {
+    background-color: #311e25;
+    padding-left: 10px;
+    padding-top: 5px;
+  }
 `;
 
 const Home = () => {
@@ -106,10 +116,24 @@ const Home = () => {
 
           <BottomBox>
             <SkillsBox>
-              <BottomText>ReactJS</BottomText>
+              <BottomText
+                style={{
+                  borderRadius: "20px 20px 0px 0px",
+                  paddingTop: "25px",
+                }}
+              >
+                ReactJS
+              </BottomText>
               <BottomText>NodeJS</BottomText>
               <BottomText>ExpressJS</BottomText>
-              <BottomText>Laravel</BottomText>
+              <BottomText
+                style={{
+                  paddingBottom: "25px",
+                  borderRadius: "0px 0px 20px 20px",
+                }}
+              >
+                Laravel
+              </BottomText>
             </SkillsBox>
           </BottomBox>
         </LeftBox>
