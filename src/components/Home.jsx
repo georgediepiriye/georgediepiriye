@@ -116,24 +116,10 @@ const Home = () => {
 
           <BottomBox>
             <SkillsBox>
-              <BottomText
-                style={{
-                  borderRadius: "20px 20px 0px 0px",
-                  paddingTop: "25px",
-                }}
-              >
-                ReactJS
-              </BottomText>
+              <BottomText>ReactJS</BottomText>
               <BottomText>NodeJS</BottomText>
               <BottomText>ExpressJS</BottomText>
-              <BottomText
-                style={{
-                  paddingBottom: "25px",
-                  borderRadius: "0px 0px 20px 20px",
-                }}
-              >
-                Laravel
-              </BottomText>
+              <BottomText>Laravel</BottomText>
             </SkillsBox>
           </BottomBox>
         </LeftBox>
