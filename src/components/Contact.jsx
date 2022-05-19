@@ -6,6 +6,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   background-color: #d9d2d2;
+  overflow: hidden;
 `;
 
 const Wrapper = styled.div`
@@ -87,12 +88,12 @@ const Button = styled.div`
 
 const Contact = () => {
   return (
-    <Container>
+    <Container id="contact">
       <Wrapper>
         <LeftSide>
           <Heading>Get in Touch</Heading>
           <SubText>
-            Do you have a project? Get in touch,let me handle your project
+            Do you have a project? Get in touch, let me handle your project
             professionally
           </SubText>
         </LeftSide>

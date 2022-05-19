@@ -76,39 +76,51 @@ const ImageText = styled.div`
   color: #db9a64;
   margin-top: 10px;
 `;
+
+const Link = styled.a``;
 const Projects = () => {
   return (
-    <Container>
+    <Container id="projects">
       <Wrapper>
         <Heading>Here are</Heading>
         <Heading>Some of my projects</Heading>
         <Arrow>
           <ArrowDownwardIcon />
         </Arrow>
-        <ImageContainer>
-          <Image src={tales} />
-          <ImageText>Tales of Time</ImageText>
-        </ImageContainer>
+        <Link href="http://talesoftime.herokuapp.com/">
+          <ImageContainer>
+            <Image src={tales} />
+            <ImageText>Tales of Time</ImageText>
+          </ImageContainer>
+        </Link>
 
-        <ImageContainer>
-          <Image src={heritage} />
-          <ImageText>Heritage Buddy</ImageText>
-        </ImageContainer>
+        <Link href="https://heritagebuddy.herokuapp.com">
+          <ImageContainer>
+            <Image src={heritage} />
+            <ImageText>Heritage Buddy</ImageText>
+          </ImageContainer>
+        </Link>
 
-        <ImageContainer>
-          <Image src={trends} />
-          <ImageText>Trends.ng</ImageText>
-        </ImageContainer>
+        <Link href="https://trendsng.herokuapp.com/">
+          <ImageContainer>
+            <Image src={trends} />
+            <ImageText>Trends.ng</ImageText>
+          </ImageContainer>
+        </Link>
 
-        <ImageContainer>
-          <Image src={zuri} />
-          <ImageText>Zuri</ImageText>
-        </ImageContainer>
+        <Link href="https://www.zuri.chat/">
+          <ImageContainer>
+            <Image src={zuri} />
+            <ImageText>Zuri</ImageText>
+          </ImageContainer>
+        </Link>
 
-        <ImageContainer>
-          <Image src={ayalo} />
-          <ImageText>Ayalo</ImageText>
-        </ImageContainer>
+        <Link href="https://ayalo.herokuapp.com/">
+          <ImageContainer>
+            <Image src={ayalo} />
+            <ImageText>Ayalo</ImageText>
+          </ImageContainer>
+        </Link>
 
         <ImageContainer>
           <Image src={port} />

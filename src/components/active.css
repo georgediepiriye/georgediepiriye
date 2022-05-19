@@ -1,0 +1,10 @@
+.active {
+  transform: scale(1.4);
+  font-weight: 700;
+  color: #db9a64;
+  font-size: 20px;
+}
+
+.active:hover {
+  color: #db9a64;
+}

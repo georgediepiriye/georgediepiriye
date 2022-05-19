@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
+import { Link } from "react-scroll";
+import "./active.css";
 
 const Container = styled.div`
   display: flex;
@@ -9,6 +11,7 @@ const Container = styled.div`
   justify-content: space-between;
   background-color: #311e25;
   height: 80px;
+  overflow: hidden;
 
   position: fixed;
   top: 0;
@@ -24,6 +27,9 @@ const LogoContainer = styled.div`
 const Logo = styled.h1`
   color: #db9a64;
   cursor: pointer;
+  border-top: 1px solid #db9a64;
+  border-left: 1px solid #db9a64;
+  padding-left: 5px;
 `;
 
 const MiddleContainer = styled.div`
@@ -127,17 +133,69 @@ const Nav = () => {
   return (
     <Container>
       <LogoContainer>
-        <Logo>GD.</Logo>
+        <Logo>GD</Logo>
       </LogoContainer>
 
       <MiddleContainer>
-        <NavItem>Home</NavItem>
-        <NavItem>About</NavItem>
-        <NavItem>Projects</NavItem>
-        <NavItem>Contact</NavItem>
+        <NavItem>
+          <Link
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            activeClass="active"
+          >
+            Home
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            activeClass="active"
+          >
+            About
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            activeClass="active"
+          >
+            Projects
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link
+            to="connect"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            activeClass="active"
+          >
+            Connect
+          </Link>
+        </NavItem>
       </MiddleContainer>
       <EndContainer>
-        <EndButton>Let's Talk</EndButton>
+        <Link
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+          to="contact"
+        >
+          <EndButton>Let's Talk</EndButton>
+        </Link>
       </EndContainer>
 
       <IconBox>
@@ -152,11 +210,72 @@ const Nav = () => {
         )}
         {show ? (
           <SideMenu>
-            <SideItem>Home</SideItem>
-            <SideItem>About</SideItem>
-            <SideItem>Projects</SideItem>
-            <SideItem>Contact</SideItem>
-            <SideItem>Let's Talk</SideItem>
+            <SideItem onClick={handleClick}>
+              <Link
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                activeClass="active"
+                onClick={handleClick}
+              >
+                Home
+              </Link>
+            </SideItem>
+            <SideItem onClick={handleClick}>
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                activeClass="active"
+                onClick={handleClick}
+              >
+                About
+              </Link>
+            </SideItem>
+            <SideItem onClick={handleClick}>
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                activeClass="active"
+                onClick={handleClick}
+              >
+                Projects
+              </Link>
+            </SideItem>
+            <SideItem>
+              <Link
+                to="connect"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                activeClass="active"
+                onClick={handleClick}
+              >
+                Connect
+              </Link>
+            </SideItem>
+
+            <SideItem>
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                activeClass="active"
+                onClick={handleClick}
+              >
+                Let's Talk
+              </Link>
+            </SideItem>
           </SideMenu>
         ) : null}
       </IconBox>

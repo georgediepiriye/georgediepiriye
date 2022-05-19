@@ -9,6 +9,7 @@ const Container = styled.div`
   width: 100%;
   justify-content: center;
   background-color: white;
+  overflow: hidden;
 `;
 
 const Wrapper = styled.div`
@@ -80,7 +81,7 @@ const TwitterIconContainer = styled.div`
 
 const Connect = () => {
   return (
-    <Container>
+    <Container id="connect">
       <Wrapper>
         <Heading>Don't be a stranger</Heading>
         <SecondHeading>Let's Connect</SecondHeading>

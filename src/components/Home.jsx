@@ -8,6 +8,7 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   height: 700px;
+  overflow: hidden;
 
   background-color: #d9d2d2;
 `;
@@ -80,7 +81,7 @@ const BottomText = styled.div`
 
 const Home = () => {
   return (
-    <Container>
+    <Container id="home">
       <Wrapper>
         <LeftBox>
           <FirstText>Hi, i'm George Diepiriye</FirstText>

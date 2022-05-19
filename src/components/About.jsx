@@ -7,6 +7,7 @@ const Container = styled.div`
   width: 100%;
   height: auto;
   flex-direction: column;
+  overflow: hidden;
 
   background-color: #311e25;
   display: flex;
@@ -59,7 +60,7 @@ const Image = styled.img`
 `;
 const About = () => {
   return (
-    <Container>
+    <Container id="about">
       <Wrapper>
         <Heading>A LITTLE ABOUT ME</Heading>
         <Arrow>

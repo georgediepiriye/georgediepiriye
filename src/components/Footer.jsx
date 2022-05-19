@@ -6,6 +6,7 @@ const Container = styled.div`
   width: 100%;
   justify-content: center;
   background-color: #d9d2d2;
+  overflow: hidden;
 `;
 
 const FooterText = styled.div`
