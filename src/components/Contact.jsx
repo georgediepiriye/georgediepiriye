@@ -103,20 +103,19 @@ const Contact = () => {
     const newMessage = { email, name, subject, message };
     try {
       setIsSendingMessage(true);
-      setTimeout(async () => {
-        const res = await axios.post(
-          `https://api-georgediepiriye.herokuapp.com/api/v1/message`,
-          newMessage
-        );
-        if (res) {
-          setIsSendingMessage(false);
-          notify();
-          setEmail("");
-          setName("");
-          setSubject("");
-          setMessage("");
-        }
-      }, 3000);
+
+      const res = await axios.post(
+        `https://api-georgediepiriye.herokuapp.com/api/v1/message`,
+        newMessage
+      );
+      if (res) {
+        setIsSendingMessage(false);
+        notify();
+        setEmail("");
+        setName("");
+        setSubject("");
+        setMessage("");
+      }
     } catch (error) {
       console.log(error);
     }
