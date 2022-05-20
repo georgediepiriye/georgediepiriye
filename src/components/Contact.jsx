@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import axios from "axios";
+import CircularProgress from "@mui/material/CircularProgress";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Container = styled.div`
   width: 100%;
@@ -28,7 +32,7 @@ const LeftSide = styled.div`
   flex: 1;
 `;
 
-const RightSide = styled.div`
+const RightSide = styled.form`
   flex: 1;
   margin-left: 20px;
 
@@ -64,7 +68,7 @@ const ButtonContainer = styled.div`
   display: flex;
 `;
 
-const Button = styled.div`
+const Button = styled.button`
   width: 100%;
   border: 1px solid #db9a64;
 
@@ -87,8 +91,48 @@ const Button = styled.div`
 `;
 
 const Contact = () => {
+  const [isSendingMessage, setIsSendingMessage] = useState(false);
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  //send message
+  const sendMessage = async (e) => {
+    e.preventDefault();
+    const newMessage = { email, name, subject, message };
+    try {
+      setIsSendingMessage(true);
+      setTimeout(async () => {
+        const res = await axios.post(
+          `http://localhost:5000/api/v1/message`,
+          newMessage
+        );
+        if (res) {
+          setIsSendingMessage(false);
+          notify();
+          setEmail("");
+          setName("");
+          setSubject("");
+          setMessage("");
+        }
+      }, 3000);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  //toast when message is sent
+  const notify = () => {
+    toast.success("Message sent successfully!", {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: false,
+    });
+  };
+
   return (
     <Container id="contact">
+      <ToastContainer />
       <Wrapper>
         <LeftSide>
           <Heading>Get in Touch</Heading>
@@ -97,13 +141,55 @@ const Contact = () => {
             professionally
           </SubText>
         </LeftSide>
-        <RightSide>
-          <Input type="email" placeholder="Enter Your email address" />
-          <Input type="text" placeholder="Enter Subject" />
-          <Input type="text" placeholder="Enter Your name/company name" />
-          <MessageInput type="text" placeholder="Enter Your message" />
+        <RightSide onSubmit={sendMessage}>
+          <Input
+            type="email"
+            placeholder="Enter Your Email Address"
+            id="email"
+            required
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
+          <Input
+            type="text"
+            placeholder="Enter Subject"
+            id="subject"
+            required
+            value={subject}
+            onChange={(e) => {
+              setSubject(e.target.value);
+            }}
+          />
+          <Input
+            type="text"
+            placeholder="Enter Your name/company name"
+            id="name"
+            required
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
+          <MessageInput
+            type="text"
+            placeholder="Enter Your message"
+            id="message"
+            required
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+          />
           <ButtonContainer>
-            <Button>Send</Button>
+            {!isSendingMessage ? (
+              <Button type="submit">Send</Button>
+            ) : (
+              <Button disabled>
+                <CircularProgress color="inherit" />
+              </Button>
+            )}
           </ButtonContainer>
         </RightSide>
       </Wrapper>
