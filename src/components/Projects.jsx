@@ -7,6 +7,7 @@ import port from "../images/port.jpg";
 import tales from "../images/tales.jpg";
 import trends from "../images/trends.jpg";
 import zuri from "../images/zuri.jpg";
+import csop from "../images/csop.png";
 
 const Container = styled.div`
   display: flex;
@@ -82,29 +83,34 @@ const Projects = () => {
     <Container id="projects">
       <Wrapper>
         <Heading>Here are</Heading>
-        <Heading>Some of my projects</Heading>
+        <Heading>Some of my works</Heading>
         <Arrow>
           <ArrowDownwardIcon />
         </Arrow>
+
+        <ImageContainer href="https://vocal-gnome-485a8a.netlify.app/login">
+          <Image src={csop} />
+          <ImageText>CSOP</ImageText>
+        </ImageContainer>
+
+        <ImageContainer href="https://delightful-croissant-4a4821.netlify.app/">
+          <Image src={heritage} />
+          <ImageText>Heritage Buddy</ImageText>
+        </ImageContainer>
 
         <ImageContainer href="http://talesoftime.herokuapp.com/">
           <Image src={tales} />
           <ImageText>Tales of Time</ImageText>
         </ImageContainer>
 
-        <ImageContainer href="https://heritagebuddy.herokuapp.com">
-          <Image src={heritage} />
-          <ImageText>Heritage Buddy</ImageText>
+        <ImageContainer href="https://www.zuri.chat/">
+          <Image src={zuri} />
+          <ImageText>Zuri</ImageText>
         </ImageContainer>
 
         <ImageContainer href="https://trendsng.herokuapp.com/">
           <Image src={trends} />
           <ImageText>Trends.ng</ImageText>
-        </ImageContainer>
-
-        <ImageContainer href="https://www.zuri.chat/">
-          <Image src={zuri} />
-          <ImageText>Zuri</ImageText>
         </ImageContainer>
 
         <ImageContainer href="https://ayalo.herokuapp.com/">
