@@ -16,7 +16,7 @@ const FooterText = styled.div`
 const Footer = () => {
   return (
     <Container>
-      <FooterText>Copyright ©2022 All rights reserved </FooterText>
+      <FooterText>Copyright ©2023 All rights reserved </FooterText>
     </Container>
   );
 };

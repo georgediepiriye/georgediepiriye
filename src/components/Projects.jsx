@@ -8,11 +8,12 @@ import tales from "../images/tales.jpg";
 import trends from "../images/trends.jpg";
 import zuri from "../images/zuri.jpg";
 import csop from "../images/csop.png";
+import dg from "../images/dg_delicacy.png";
+import foppi from "../images/foppi.png";
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
-
   width: 100%;
   height: auto;
   background-color: #d9d2d2;
@@ -51,7 +52,6 @@ const ImageContainer = styled.a`
   height: auto;
   flex-direction: column;
   margin-top: 50px;
-
   border-radius: 10px;
   padding: 30px;
   transition: 0.3s;
@@ -78,6 +78,13 @@ const ImageText = styled.div`
   margin-top: 10px;
 `;
 
+const Description = styled.div`
+  font-size: 14px;
+  font-weight: 600;
+  color: #616161;
+  margin-top: 10px;
+`;
+
 const Projects = () => {
   return (
     <Container id="projects">
@@ -91,21 +98,51 @@ const Projects = () => {
         <ImageContainer href="https://vocal-gnome-485a8a.netlify.app/login">
           <Image src={csop} />
           <ImageText>CSOP</ImageText>
+          <Description>
+            A multi-tenant school management system tailored to meet specific
+            needs of schools. Built with nextjs and nodejs{" "}
+          </Description>
         </ImageContainer>
 
         <ImageContainer href="https://delightful-croissant-4a4821.netlify.app/">
           <Image src={heritage} />
           <ImageText>Heritage Buddy</ImageText>
+          <Description>
+            An advanced church management system with a real time chat system
+            for members. Built with react and nodejs.
+          </Description>
         </ImageContainer>
 
         <ImageContainer href="http://talesoftime.herokuapp.com/">
           <Image src={tales} />
           <ImageText>Tales of Time</ImageText>
+          <Description>
+            A wrist watch ecommerce system built with Laravel
+          </Description>
         </ImageContainer>
 
         <ImageContainer href="https://www.zuri.chat/">
           <Image src={zuri} />
           <ImageText>Zuri</ImageText>
+          <Description>An Open-Source Collaboration Software</Description>
+        </ImageContainer>
+
+        <ImageContainer href="https://dg-delicacy-chatbot.vercel.app/">
+          <Image src={dg} />
+          <ImageText>DG Delicacy</ImageText>
+          <Description>
+            A simple restaurant bot to illustrate the use of websocket
+          </Description>
+        </ImageContainer>
+
+        <ImageContainer href="https://foppi.org/">
+          <Image src={foppi} />
+          <ImageText>Foppi</ImageText>
+          <Description>
+            A website for an NGO with the objective of improving the
+            socio-economic status of the underprivileged and disadvantaged
+            community women, older persons, children, and youth.
+          </Description>
         </ImageContainer>
 
         <ImageContainer href="https://trendsng.herokuapp.com/">
