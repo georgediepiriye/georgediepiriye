@@ -119,7 +119,7 @@ const Home = () => {
               <BottomText>ReactJS</BottomText>
               <BottomText>NodeJS</BottomText>
               <BottomText>ExpressJS</BottomText>
-              <BottomText>Laravel</BottomText>
+              <BottomText>TypeScript</BottomText>
             </SkillsBox>
           </BottomBox>
         </LeftBox>
